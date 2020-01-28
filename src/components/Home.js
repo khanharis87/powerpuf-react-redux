@@ -1,24 +1,17 @@
 import React from "react";
 import EpisodeList from "./EpisodeList";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchEpisodes, fetchEpisode } from "../redux/actions";
+import { fetchEpisodesAction, fetchEpisodeAction } from "../redux/actions";
+import useFetchEpisodes from "../hooks/useFetchEpisodes";
 
 const Home = () => {
   const dispatch = useDispatch();
   const episodes = useSelector(state => state.episodes);
 
-  // eslint-disable-line
-  React.useEffect(() => {
-    fetch("http://api.tvmaze.com/shows/6771/episodes")
-      .then(response => response.json())
-      .then(episodes => dispatch(fetchEpisodes(episodes)))
-      .catch(function(error) {
-        console.log(error);
-      });
-  }, []);
+  useFetchEpisodes(dispatch);
 
   function handleClick(id) {
-    dispatch(fetchEpisode(id));
+    dispatch(fetchEpisodeAction(id));
   }
   return (
     <React.Fragment>

@@ -102,6 +102,7 @@ a {
 
   .episode-detail-box {
     display: grid;
+    margin-top: 2rem;
     grid-template-areas:
       "img  title"
       "img  summary ";
