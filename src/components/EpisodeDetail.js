@@ -6,12 +6,11 @@ const EpisodeDetail = () => {
   return (
     <section className="episode-detail-box">
       <img
+        className="episode-detail-img"
         src={episode.image ? episode.image.medium : ""}
         alt={`Powerpuff ${episode.name}`}
       />
-      <div>
-        <h3 className="episode-detail-title">{episode.name}</h3>
-      </div>
+      <h3 className="episode-detail-title">{episode.name}</h3>
       <div
         className="episode-detail-summary"
         dangerouslySetInnerHTML={{ __html: episode.summary }}
