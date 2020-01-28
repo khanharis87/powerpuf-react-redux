@@ -93,6 +93,7 @@ a {
   justify-content: center;
 }
 
+/**DESKTOP STYLES**/
 @media screen and (min-width: 680px) {
   .episode-layout {
     flex-direction: row;

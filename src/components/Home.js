@@ -11,7 +11,10 @@ const Home = () => {
   React.useEffect(() => {
     fetch("http://api.tvmaze.com/shows/6771/episodes")
       .then(response => response.json())
-      .then(episodes => dispatch(fetchEpisodes(episodes)));
+      .then(episodes => dispatch(fetchEpisodes(episodes)))
+      .catch(function(error) {
+        console.log(error);
+      });
   }, []);
 
   function handleClick(id) {
