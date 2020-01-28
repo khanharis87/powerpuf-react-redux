@@ -16,9 +16,10 @@ export function fetchEpisode(link) {
         dispatch({
           type: FETCH_EPISODE,
           payload: episode
-        }).catch(function(error) {
-          console.log(error);
         });
+      })
+      .catch(function(error) {
+        console.log(error);
       });
   };
 }
