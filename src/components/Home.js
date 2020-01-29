@@ -1,7 +1,7 @@
 import React from "react";
 import EpisodeList from "./EpisodeList";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchEpisodesAction, fetchEpisodeAction } from "../redux/actions";
+import { fetchEpisodeAction } from "../redux/actions";
 import useFetchEpisodes from "../hooks/useFetchEpisodes";
 
 const Home = () => {
